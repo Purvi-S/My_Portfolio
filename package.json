@@ -59,5 +59,11 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.3.0"
   },
-  "homepage": "https://Purvi-S.github.io/My_Portfolio"
+  "homepage": "https://Purvi-S.github.io/My_Portfolio",
+  "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+  }
 }
