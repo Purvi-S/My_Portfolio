@@ -135,25 +135,125 @@ export const education = [
     }
 ];
 
+// PROJECTS
+// Each project has an `accent` gradient + `icon` used to render a cosmic cover
+// banner (no image files required). `category` drives the filter tabs:
+//   "backend" -> Backend & APIs | "devops" -> DevOps & Cloud
+//   "ai" -> AI / ML            | "data" -> Data & Analytics
+// TODO(Purvi): swap the placeholder `github` profile links for the specific
+// repo URLs as you publish them.
 export const projects = [
-    {
-        id: 0,
-        title: "Hospital Readmission Predictor",
-        date: "Aug 2020 - May 2021",
-        description: "Developed a predictive model to identify potential 30-day readmissions in diabetic patients using ANN and KNN algorithms on 10,000+ medical records, achieving 78% accuracy.",
-        image: `${process.env.PUBLIC_URL}/images/hospital_readmission.png`,
-        tags: ["Python", "KNN", "ANN", "Data Science", "Machine Learning"],
-        category: "machine learning",
-        github: "https://github.com/Purvi-S/AN-EFFICIENT-APPROACH-FOR-PREDICTING-HOSPITAL-READMISSION-OF-DIABETIC-PATIENT-S",         
-    },
-    {
-        id: 1,
-        title: "Rainfall Forecasting Model",
-        date: "Jan 2020 - May 2020",
-        description: "Built a precipitation prediction model using Random Forest, SVM, and XGBoost on 50,000+ weather data points, with XGBoost achieving 82% accuracy and improved model precision by 10%.",
-        image: `${process.env.PUBLIC_URL}/images/rainfall_predictor.png`, 
-        tags: ["XGBoost", "Random Forest", "SVM", "Data Analysis", "Machine Learning"],
-        category: "data science",
-        github: "", 
-    },
+  {
+    id: 0,
+    title: "Distributed Microservice Reliability & Stress Suite",
+    date: "2023 - 2024",
+    description:
+      "Stress + regression harness for 18+ distributed microservices. Python scripts simulate 3x peak concurrent load to validate auto-scaling, zero-downtime failover and stability. CloudWatch is wired into the pipeline to capture live latency, error rate and throughput, feeding structured reports that cut post-release incidents by 30%.",
+    tags: ["Python", "Kubernetes", "Docker", "AWS CloudWatch", "Bash", "PostgreSQL"],
+    category: "devops",
+    icon: "🛰️",
+    accent: ["#2dd4bf", "#3b82f6"],
+    featured: true,
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 1,
+    title: "Serverless Event-Driven Data Pipeline",
+    date: "2023 - 2024",
+    description:
+      "Event-driven ingestion pipeline on AWS Lambda, API Gateway and DynamoDB that ingests, validates and transforms high-volume streaming data with automated error handling. Tuned DynamoDB schema and added CloudWatch monitoring/alerting for end-to-end operational visibility.",
+    tags: ["AWS Lambda", "DynamoDB", "API Gateway", "Python", "CloudWatch"],
+    category: "devops",
+    icon: "⚡",
+    accent: ["#f59e0b", "#ef4444"],
+    featured: true,
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 2,
+    title: "Containerized API Test Automation Framework",
+    date: "2022 - 2023",
+    description:
+      "Reusable Python/pytest framework covering REST endpoints across 10+ microservices with functional, regression and boundary suites, catching 30+ integration defects before staging. Fully containerized for identical local/CI/staging runs and auto-triggered on every pull request via GitHub Actions, cutting manual QA effort by 40%.",
+    tags: ["Python", "pytest", "Docker", "GitHub Actions", "REST APIs"],
+    category: "devops",
+    icon: "🧪",
+    accent: ["#22d3ee", "#6366f1"],
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 3,
+    title: "Full-Stack Web Application",
+    date: "2021 - 2022",
+    description:
+      "Django (Python) backend exposing RESTful endpoints and ORM-based data models, consumed by a React frontend with multi-threaded background job processing for async operations. Normalized relational schemas with optimized indexing, plus full unit-test coverage over views, ORM queries and API contracts.",
+    tags: ["Django", "Python", "React", "PostgreSQL", "REST APIs", "ORM"],
+    category: "backend",
+    icon: "🧩",
+    accent: ["#8b5cf6", "#3b82f6"],
+    featured: true,
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 4,
+    title: "GraphQL API Gateway Service",
+    date: "2022 - 2023",
+    description:
+      "GraphQL layer over existing REST services built with Python/FastAPI, letting clients query nested resources in a single request and eliminating over-fetching. Containerized with Docker and covered by schema-level resolver tests validating query performance and data integrity against PostgreSQL.",
+    tags: ["Python", "GraphQL", "FastAPI", "PostgreSQL", "Docker"],
+    category: "backend",
+    icon: "◈",
+    accent: ["#ec4899", "#8b5cf6"],
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 5,
+    title: "AI Agent Assistant",
+    date: "2024 - 2025",
+    description:
+      "Personal AI agent built on LangChain that pairs LLM reasoning with tool-calling to automate multi-step query resolution. Implements conversation memory to hold context across multi-turn interactions and calls external tools/APIs to extend capability beyond the base model.",
+    tags: ["Python", "LangChain", "LLM APIs", "AI Agents", "Tool-Calling"],
+    category: "ai",
+    icon: "🤖",
+    accent: ["#a855f7", "#6366f1"],
+    featured: true,
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 6,
+    title: "Workforce Analytics & Recruiting Dashboard",
+    date: "2023 - 2024",
+    description:
+      "End-to-end workforce analytics over 250K+ employee and recruiting records. SQL reporting models surface hiring bottlenecks, retention risk and workforce-planning trends, visualized in interactive Power BI dashboards tracking time-to-hire, recruiter productivity and candidate conversion, with automated data-validation checks.",
+    tags: ["Power BI", "SQL", "Python", "Data Modeling", "KPI Reporting"],
+    category: "data",
+    icon: "📊",
+    accent: ["#10b981", "#0ea5e9"],
+    github: "https://github.com/Purvi-S",
+  },
+  {
+    id: 7,
+    title: "Hospital Readmission Predictor",
+    date: "Aug 2020 - May 2021",
+    description:
+      "Predictive model identifying potential 30-day readmissions in diabetic patients using ANN and KNN over 10,000+ medical records, achieving 78% accuracy.",
+    tags: ["Python", "KNN", "ANN", "Data Science", "Machine Learning"],
+    category: "ai",
+    icon: "🏥",
+    accent: ["#fb7185", "#f43f5e"],
+    github:
+      "https://github.com/Purvi-S/AN-EFFICIENT-APPROACH-FOR-PREDICTING-HOSPITAL-READMISSION-OF-DIABETIC-PATIENT-S",
+  },
+  {
+    id: 8,
+    title: "Rainfall Forecasting Model",
+    date: "Jan 2020 - May 2020",
+    description:
+      "Precipitation prediction model using Random Forest, SVM and XGBoost over 50,000+ weather data points; XGBoost reached 82% accuracy and improved precision by 10%.",
+    tags: ["XGBoost", "Random Forest", "SVM", "Data Analysis", "Machine Learning"],
+    category: "ai",
+    icon: "🌧️",
+    accent: ["#38bdf8", "#6366f1"],
+    github: "https://github.com/Purvi-S",
+  },
 ];
