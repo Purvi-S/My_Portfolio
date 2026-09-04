@@ -204,21 +204,6 @@ const Watermark = styled.span`
   z-index: 1;
 `;
 
-const FeaturedBadge = styled.span`
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 2;
-  background: rgba(0, 6, 17, 0.55);
-  backdrop-filter: blur(4px);
-  color: #ffe08a;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 224, 138, 0.4);
-`;
-
 const Body = styled.div`
   display: flex;
   flex-direction: column;
@@ -324,7 +309,6 @@ const ProjectCard = ({ project, reduce }) => {
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
       <Cover $c1={c1} $c2={c2}>
-        {project.featured && <FeaturedBadge>★ Featured</FeaturedBadge>}
         <CoverIcon>{project.icon || "🚀"}</CoverIcon>
         {project.tags?.[0] && <Watermark>{project.tags[0]}</Watermark>}
       </Cover>
