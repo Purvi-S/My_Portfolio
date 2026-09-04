@@ -86,6 +86,15 @@ export const skills = [
 
 export const experiences = [
   {
+    id: 3,
+    img: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTIwIDEyMCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjN2Y5ZmZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYTg1NWY3Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzBiMGYyZiIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjQ2IiBmaWxsPSJ1cmwoI2cpIi8+PHRleHQgeD0iNjAiIHk9Ijc0IiBmb250LWZhbWlseT0iU2Vnb2UgVUksQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0MCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SUVGPC90ZXh0Pjwvc3ZnPg==",
+    role: "Software Engineering Intern",
+    company: "Irenix Empowerment Foundation",
+    date: "Jan 2026 - May 2026",
+    desc: "Built Python backend REST APIs and data-integration modules with multi-threaded request handling and PostgreSQL/ORM data models, ensuring consistent flow from database through API to UI. Engineered automated API and web-app test/validation suites in pytest across 5+ critical workflows, owning defect triage and root-cause debugging \u2014 surfaced 12 integration defects and lifted release quality by 20% over two release cycles. Ingested and validated records from 3 external sources against schema contracts, cutting QA cycle time by 35% with zero regression escapes. Tuned PostgreSQL schemas and query plans to cut dashboard response times 30% on 500K+ row datasets, containerized the backend with Docker, and used GitHub Copilot and Claude to accelerate test generation and documentation.",
+    skills: ["Python", "REST APIs", "PostgreSQL", "ORM", "pytest", "Docker", "Data Integration", "Query Optimization", "Multi-threading", "Root Cause Analysis", "GitHub Copilot", "Claude"]
+  },
+  {
     id: 0,
     img: "https://yt3.googleusercontent.com/2Hr86NTFcknkNTn0h2UlG7r2LdoaxcAbaob6dWvFNUdmvUCwlcFsDSykn5bxyKQwFgHnma1hKtY=s900-c-k-c0x00ffffff-no-rj",
     role: "Lead Engineer / Python Developer",
