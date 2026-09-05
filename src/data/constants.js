@@ -5,7 +5,7 @@ export const Bio = {
 ],
     description: "Passionate Software Engineer and Python Developer with over 3 years of experience in Full-Stack Development, Cloud Automation, and Scalable Microservices. Experienced in building robust applications using ReactJS, Node.js, Python, and AWS. Skilled in CI/CD pipelines, DevOps practices, and automation tools to streamline development and deployment. Dedicated to solving complex problems and delivering impactful, data-driven solutions through innovative engineering.",
     github: "https://github.com/Purvi-S",
-    resume: "https://drive.google.com/file/d/1396JS9PupDf5TM0oquwAXI3agKJqBeG0/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/155EMxH9CYJSMzGQbK02-sXVOqj76u6e2/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/purvi-shantha-184828158/",
 };
 
