@@ -1,6 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 import {darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
+import StarBackground from "./components/StarBackground";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
@@ -24,7 +25,8 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Body>
-                    <div>
+                    <StarBackground />
+                    <div style={{ position: "relative", zIndex: 1 }}>
                         <Hero />
                         <Skills />
                         <Experience />
