@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
-import { Instagram, LinkedIn, GitHub, Chat } from "@mui/icons-material";
+import { LinkedIn, GitHub, Chat } from "@mui/icons-material";
 
 const FooterContainer = styled.div`
     width: 100%;
@@ -86,9 +86,7 @@ const Footer = () => {
                     <SocialMediaIcon href={Bio.linkedin} target="display">
                         <LinkedIn />
                     </SocialMediaIcon>
-                    <SocialMediaIcon href={Bio.insta} target="display">
-                        <Instagram />
-                    </SocialMediaIcon>
+                    
                     <SocialMediaIcon href={Bio.github} target="display" >
                         <GitHub />
                     </SocialMediaIcon>

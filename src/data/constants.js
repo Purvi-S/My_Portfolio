@@ -7,7 +7,6 @@ export const Bio = {
     github: "https://github.com/Purvi-S",
     resume: "https://drive.google.com/file/d/1396JS9PupDf5TM0oquwAXI3agKJqBeG0/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/purvi-shantha-184828158/",
-    insta: "https://www.instagram.com/purvi.poo/",
 };
 
 export const skills = [
@@ -91,7 +90,7 @@ export const experiences = [
     role: "Software Engineering Intern",
     company: "Irenix Empowerment Foundation",
     date: "Jan 2026 - May 2026",
-    desc: "Built Python backend REST APIs and data-integration modules with multi-threaded request handling and PostgreSQL/ORM data models, ensuring consistent flow from database through API to UI. Engineered automated API and web-app test/validation suites in pytest across 5+ critical workflows, owning defect triage and root-cause debugging \u2014 surfaced 12 integration defects and lifted release quality by 20% over two release cycles. Ingested and validated records from 3 external sources against schema contracts, cutting QA cycle time by 35% with zero regression escapes. Tuned PostgreSQL schemas and query plans to cut dashboard response times 30% on 500K+ row datasets, containerized the backend with Docker, and used GitHub Copilot and Claude to accelerate test generation and documentation.",
+    desc: "Built Python backend REST APIs and data-integration modules with multi-threaded request handling and PostgreSQL/ORM data models, ensuring consistent flow from database through API to UI. Engineered automated API and web-app test/validation suites in pytest across 5+ critical workflows, owning defect triage and root-cause debugging - surfaced 12 integration defects and lifted release quality by 20% over two release cycles. Ingested and validated records from 3 external sources against schema contracts, cutting QA cycle time by 35% with zero regression escapes. Tuned PostgreSQL schemas and query plans to cut dashboard response times 30% on 500K+ row datasets, containerized the backend with Docker, and used GitHub Copilot and Claude to accelerate test generation and documentation.",
     skills: ["Python", "REST APIs", "PostgreSQL", "ORM", "pytest", "Docker", "Data Integration", "Query Optimization", "Multi-threading", "Root Cause Analysis", "GitHub Copilot", "Claude"]
   },
   {
