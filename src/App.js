@@ -1,8 +1,8 @@
+import { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import StarBackground from "./components/StarBackground";
-import Intro from "./components/Intro";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
@@ -20,19 +20,43 @@ const Body = styled.div`
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background:
-        linear-gradient(180deg, rgba(246, 241, 232, 0.06), rgba(238, 229, 213, 0.10)),
-        url("${bg}") center / cover no-repeat fixed;
     background-color: #efe7d9;
+    background-image:
+        linear-gradient(180deg, rgba(246, 241, 232, 0.06), rgba(238, 229, 213, 0.10)),
+        url("${bg}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: 0%; /* driven by scroll -> pans top to bottom */
 `;
 
 function App() {
+    const bodyRef = useRef(null);
+
+    useEffect(() => {
+        const onScroll = () => {
+            const doc = document.documentElement;
+            const max = doc.scrollHeight - doc.clientHeight;
+            const frac = max > 0 ? window.scrollY / max : 0;
+            if (bodyRef.current) {
+                bodyRef.current.style.backgroundPositionY = `${(frac * 100).toFixed(2)}%`;
+            }
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        onScroll();
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            window.removeEventListener("resize", onScroll);
+        };
+    }, []);
+
     return (
         <ThemeProvider theme={darkTheme}>
             <BrowserRouter>
-                <Intro />
                 <Navbar />
-                <Body>
+                <Body ref={bodyRef}>
                     <StarBackground />
                     <div style={{ position: "relative", zIndex: 1 }}>
                         <Hero />
