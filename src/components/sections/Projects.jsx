@@ -56,6 +56,14 @@ const Title = styled.h2`
     margin-top: 12px;
     font-size: 34px;
   }
+
+    display: inline-block;
+    background: rgba(251, 248, 242, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 6px 26px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(53, 48, 42, 0.12);
 `;
 
 const Desc = styled.p`
@@ -68,6 +76,15 @@ const Desc = styled.p`
   @media (max-width: 768px) {
     font-size: 15px;
   }
+
+    display: inline-block;
+    background: rgba(251, 248, 242, 0.68);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 8px 22px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(53, 48, 42, 0.10);
+    max-width: 92%;
 `;
 
 /* ---------- Filter bar ---------- */
