@@ -159,7 +159,7 @@ class Contact extends Component {
             <Container id="Contact">
                 <Wrapper>
                     <Title>Contact</Title>
-                    <Desc>I’d love to connect — reach out with any questions, collaborations, or opportunities.</Desc>
+                    <Desc>I’d love to connect - reach out with any questions, collaborations, or opportunities.</Desc>
                     <ContactForm ref={this.formRef} onSubmit={this.handleSubmit}>
                         <ContactTitle>Email Me</ContactTitle>
                         <ContactInput placeholder="Your Email*" name="from_email" />
