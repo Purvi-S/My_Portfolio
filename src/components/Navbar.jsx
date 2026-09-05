@@ -12,41 +12,77 @@ const navOptions = [
   { label: "Contact", id: "Contact" },
 ];
 
-/* ============ Desktop side rail ============ */
+/* ============ Desktop side rail (slim) ============ */
 const Rail = styled.nav`
   position: fixed;
-  left: 22px;
+  left: 18px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 30;
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  padding: 24px 18px;
-  border-radius: 34px;
-  background: rgba(251, 248, 242, 0.5);
+  align-items: center;
+  gap: 16px;
+  padding: 16px 14px;
+  border-radius: 30px;
+  background: rgba(251, 248, 242, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(169, 130, 79, 0.2);
-  box-shadow: 0 12px 34px rgba(53, 48, 42, 0.12);
-
-  /* the vertical thread linking the dots */
-  &::before {
-    content: "";
-    position: absolute;
-    left: 28px;
-    top: 30px;
-    bottom: 30px;
-    width: 1.5px;
-    background: linear-gradient(
-      ${({ theme }) => theme.primary}55,
-      ${({ theme }) => theme.primary}22
-    );
-  }
+  border: 1px solid rgba(169, 130, 79, 0.22);
+  box-shadow: 0 10px 28px rgba(53, 48, 42, 0.14);
 
   @media (max-width: 900px) {
     display: none;
   }
+`;
+
+const DotGroup = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  /* thread linking the dots */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    bottom: 6px;
+    width: 1.5px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      ${({ theme }) => theme.primary}66,
+      ${({ theme }) => theme.primary}22
+    );
+  }
+`;
+
+const Label = styled.span`
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: rgba(251, 248, 242, 0.95);
+  border: 1px solid rgba(169, 130, 79, 0.2);
+  box-shadow: 0 6px 18px rgba(53, 48, 42, 0.12);
+  color: ${({ theme }) => theme.primary};
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  ${({ $active }) =>
+    $active &&
+    css`
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    `}
 `;
 
 const Dot = styled.span`
@@ -54,7 +90,6 @@ const Dot = styled.span`
   z-index: 1;
   width: 12px;
   height: 12px;
-  flex-shrink: 0;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.primary};
   background: ${({ $active, theme }) => ($active ? theme.primary : theme.card)};
@@ -62,54 +97,38 @@ const Dot = styled.span`
   ${({ $active, theme }) =>
     $active &&
     css`
-      box-shadow: 0 0 0 4px ${theme.primary}33, 0 0 12px ${theme.primary};
+      box-shadow: 0 0 0 4px ${theme.primary}30, 0 0 10px ${theme.primary};
     `}
 `;
 
-const Label = styled.span`
-  font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-  color: ${({ $active, theme }) =>
-    $active ? theme.primary : theme.text_primary};
-  opacity: ${({ $active }) => ($active ? 1 : 0)};
-  transform: translateX(${({ $active }) => ($active ? "0" : "-8px")});
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
-`;
-
 const Item = styled.a`
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
   text-decoration: none;
   cursor: pointer;
 
   &:hover ${Dot} {
-    transform: scale(1.35);
+    transform: scale(1.3);
   }
   &:hover ${Label} {
     opacity: 1;
-    transform: translateX(0);
-    color: ${({ theme }) => theme.primary};
+    transform: translateY(-50%) translateX(0);
   }
 `;
 
 const Divider = styled.span`
+  width: 22px;
   height: 1px;
-  margin: 4px 2px;
   background: ${({ theme }) => theme.primary}33;
 `;
 
 const IconLink = styled.a`
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  font-size: 17px;
   color: ${({ theme }) => theme.text_secondary};
   transition: color 0.3s ease, transform 0.3s ease;
   &:hover {
@@ -134,7 +153,7 @@ const Burger = styled.button`
   height: 46px;
   border: 1px solid rgba(169, 130, 79, 0.25);
   border-radius: 50%;
-  background: rgba(251, 248, 242, 0.8);
+  background: rgba(251, 248, 242, 0.85);
   backdrop-filter: blur(10px);
   color: ${({ theme }) => theme.primary};
   font-size: 18px;
@@ -165,9 +184,9 @@ const Drawer = styled.nav`
   left: 0;
   bottom: 0;
   z-index: 41;
-  width: 250px;
+  width: 240px;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   padding: 84px 26px 26px;
   background: rgba(251, 248, 242, 0.97);
   backdrop-filter: blur(14px);
@@ -182,12 +201,11 @@ const DrawerLink = styled.a`
   font-size: 26px;
   font-weight: 600;
   text-decoration: none;
-  padding: 8px 4px;
+  padding: 8px 0 8px 12px;
   color: ${({ $active, theme }) =>
     $active ? theme.primary : theme.text_primary};
   border-left: 2px solid
     ${({ $active, theme }) => ($active ? theme.primary : "transparent")};
-  padding-left: 12px;
   transition: color 0.25s ease, border-color 0.25s ease;
 `;
 
@@ -241,19 +259,20 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop vertical rail */}
       <Rail aria-label="Section navigation">
-        {navOptions.map((nav) => (
-          <Item
-            key={nav.id}
-            href={`#${nav.id}`}
-            onClick={() => go(nav.id)}
-            aria-current={activeTab === nav.id ? "true" : undefined}
-          >
-            <Dot $active={activeTab === nav.id} />
-            <Label $active={activeTab === nav.id}>{nav.label}</Label>
-          </Item>
-        ))}
+        <DotGroup>
+          {navOptions.map((nav) => (
+            <Item
+              key={nav.id}
+              href={`#${nav.id}`}
+              onClick={() => go(nav.id)}
+              aria-current={activeTab === nav.id ? "true" : undefined}
+            >
+              <Dot $active={activeTab === nav.id} />
+              <Label $active={activeTab === nav.id}>{nav.label}</Label>
+            </Item>
+          ))}
+        </DotGroup>
         <Divider />
         <IconLink href={Bio.resume} target="_blank" rel="noopener noreferrer" title="Resume">
           <FaRegFileAlt />
@@ -263,7 +282,6 @@ const Navbar = () => {
         </IconLink>
       </Rail>
 
-      {/* Mobile */}
       <Burger onClick={() => setOpen((o) => !o)} aria-label="Menu">
         {open ? <FaTimes /> : <FaBars />}
       </Burger>

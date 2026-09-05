@@ -108,10 +108,22 @@ const VoiceIntro = () => {
     utter.rate = 1;
     utter.pitch = 1;
     const voices = window.speechSynthesis.getVoices();
+    const femaleHints = [
+      "female", "samantha", "victoria", "karen", "moira", "tessa", "fiona",
+      "serena", "allison", "ava", "susan", "zira", "hazel", "aria", "jenny",
+      "sonia", "libby", "natasha", "clara", "amelie", "joana", "luciana",
+      "google uk english female", "google us english",
+    ];
+    const isEn = (v) => v.lang && v.lang.toLowerCase().startsWith("en");
+    const named = (v) =>
+      femaleHints.some((h) => v.name && v.name.toLowerCase().includes(h));
     const preferred =
-      voices.find((v) => /en(-|_)?(US|GB)/i.test(v.lang)) ||
-      voices.find((v) => v.lang && v.lang.startsWith("en"));
+      voices.find((v) => isEn(v) && named(v)) || // female + English
+      voices.find((v) => named(v)) ||            // female, any language
+      voices.find((v) => isEn(v)) ||             // any English
+      voices[0];
     if (preferred) utter.voice = preferred;
+    utter.pitch = 1.08; // a touch brighter
     utter.onend = () => setSpeaking(false);
     utter.onerror = () => setSpeaking(false);
     window.speechSynthesis.speak(utter);
