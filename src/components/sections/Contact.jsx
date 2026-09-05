@@ -79,7 +79,7 @@ const ContactForm = styled.form`
     background-color: ${({ theme }) => theme.card};
     padding: 32px;
     border-radius: 16px;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    box-shadow: 0 10px 30px rgba(53, 48, 42, 0.12);
     margin-top: 28px;
     gap: 12px;
 `;
@@ -123,18 +123,21 @@ const ContactButton = styled.input`
     width: 100%;
     text-decoration: none;
     text-align: center;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: ${({ theme }) => theme.primary};
+    background: linear-gradient(135deg, #c2a06a 0%, #a9824f 100%);
     padding: 13px 16px;
     margin-top: 2px;
     border-radius: 12px;
     border: none;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.white};
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    &:hover {
+        box-shadow: 0 8px 24px rgba(169, 130, 79, 0.4);
+        transform: translateY(-1px);
+    }
 `;
 
 class Contact extends Component {

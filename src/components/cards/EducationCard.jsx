@@ -68,7 +68,7 @@ const Grade = styled.div`
 const StyledDate = styled.div`
   font-size: 16px;
   font-weight: 700;
-  color: ${({ theme }) => theme.primary};
+  color: #7a5a2e;
 `;
 
 const EducationCard = ({ education }) => {

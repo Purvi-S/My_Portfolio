@@ -53,7 +53,7 @@ const Company = styled.div`
 const Date = styled.div`
   font-size: 18px;
   font-weight: 700;
-  color: ${({ theme }) => theme.primary};
+  color: #7a5a2e;
 `;
 
 const Description = styled.div`
