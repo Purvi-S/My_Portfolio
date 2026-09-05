@@ -5,7 +5,6 @@ A personal portfolio website built with **React** and a **3D, space-themed** des
 ## 🔗 Live Demo
 
 - **GitHub Pages:** https://purvi-s.github.io/My_Portfolio/
-- **Vercel:** _(add your stable production URL here — the one without the random deployment hash)_
 
 ## 🔧 Technologies Used
 
@@ -95,4 +94,4 @@ All content lives in `src/data/constants.js` — update your bio, roles, social 
 ## 📫 Contact
 
 - **GitHub:** https://github.com/Purvi-S
-- **LinkedIn:** https://www.linkedin.com/in/purvi-shantha-184828158/
+- **LinkedIn:** https://www.linkedin.com/in/purvi-shantha/
