@@ -41,11 +41,20 @@ const HeroInnerContainer = styled.div`
 
 const Left = styled.div`
   width: 100%;
+  max-width: 620px;
+  background: rgba(251, 248, 242, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(169, 130, 79, 0.18);
+  border-radius: 24px;
+  padding: 40px 44px;
+  box-shadow: 0 14px 40px rgba(53, 48, 42, 0.12);
   @media (max-width: 960px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 30px 24px;
   }
 `;
 

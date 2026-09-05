@@ -15,18 +15,29 @@ import Education from "./components/sections/Education";
 const bg = `${process.env.PUBLIC_URL}/bg.jpg`;
 
 const Body = styled.div`
-    /* your photo, fixed, with a warm cream veil so text stays readable */
-    background:
-        linear-gradient(180deg, rgba(246, 241, 232, 0.82) 0%, rgba(238, 229, 213, 0.88) 100%),
-        url("${bg}");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    position: relative;
+    background-color: #efe7d9; /* warm cream fallback */
+`;
+
+/* Blurred, zoomed copy that fills the whole screen (the "cover" fill) */
+const BgBlur = styled.div`
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: url("${bg}") center / cover no-repeat;
+    filter: blur(26px) saturate(1.05);
+    transform: scale(1.12);
+`;
+
+/* The COMPLETE photo, sharp and uncropped, centered on top of the blur */
+const BgPhoto = styled.div`
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: url("${bg}") center / contain no-repeat;
 `;
 
 function App() {
@@ -35,6 +46,8 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Body>
+                    <BgBlur />
+                    <BgPhoto />
                     <StarBackground />
                     <div style={{ position: "relative", zIndex: 1 }}>
                         <Hero />
