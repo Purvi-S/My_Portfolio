@@ -1,7 +1,6 @@
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
-import Aurora from "./components/Aurora";
 import StarBackground from "./components/StarBackground";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
@@ -13,12 +12,17 @@ import Footer from "./components/sections/Footer";
 import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 
+const bg = `${process.env.PUBLIC_URL}/bg.jpg`;
+
 const Body = styled.div`
-    /* soft morning light spilling from the top-left, warm cream base */
+    /* your photo, fixed, with a warm cream veil so text stays readable */
     background:
-        radial-gradient(120% 90% at 8% 0%, #fefcf7 0%, transparent 45%),
-        radial-gradient(90% 70% at 100% 20%, #f3e7d3 0%, transparent 50%),
-        linear-gradient(180deg, #f6f1e8 0%, #efe6d6 100%);
+        linear-gradient(180deg, rgba(246, 241, 232, 0.82) 0%, rgba(238, 229, 213, 0.88) 100%),
+        url("${bg}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -31,7 +35,6 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Body>
-                    <Aurora />
                     <StarBackground />
                     <div style={{ position: "relative", zIndex: 1 }}>
                         <Hero />

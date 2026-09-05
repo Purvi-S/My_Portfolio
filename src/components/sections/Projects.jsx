@@ -109,7 +109,7 @@ const PillGlow = styled(motion.span)`
   position: absolute;
   inset: 0;
   border-radius: 999px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #a855f7);
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #8a6a3f);
   box-shadow: 0 6px 22px ${({ theme }) => theme.primary}66;
   z-index: -1;
 `;
@@ -298,7 +298,7 @@ const Empty = styled.p`
 
 /* ---------- Card component ---------- */
 const ProjectCard = ({ project, reduce }) => {
-  const [c1, c2] = project.accent || ["#7f9fff", "#a855f7"];
+  const [c1, c2] = project.accent || ["#c2a06a", "#8a6a3f"];
   return (
     <Card
       layout

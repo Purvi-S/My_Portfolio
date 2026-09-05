@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { FaVolumeUp, FaStop } from "react-icons/fa";
 import { Bio } from "../data/constants";
 
@@ -59,7 +59,9 @@ const Btn = styled.button`
 
   ${({ $speaking }) =>
     $speaking &&
-    `animation: ${pulse} 1.4s infinite;`}
+    css`
+      animation: ${pulse} 1.4s infinite;
+    `}
 `;
 
 const VoiceIntro = () => {
