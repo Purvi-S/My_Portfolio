@@ -61,12 +61,12 @@ const Skill = styled.div`
     max-width: 500px;
     background-color: ${({ theme }) => theme.card};
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 24px rgba(53, 48, 42, 0.10);
     padding: 20px;
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 14px 38px rgba(53, 48, 42, 0.16);
         filter: brightness(1.1);
     }
 `;
@@ -88,19 +88,20 @@ const SkillItem = styled.div`
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: ${({ theme }) => theme.text_secondary + "75"}; // Lighter shade
+    background-color: ${({ theme }) => theme.card_light};
+    border: 1px solid ${({ theme }) => theme.primary}22;
     padding: 10px 16px;
     border-radius: 8px;
     margin: 6px;
     font-size: 15px;
     font-weight: 600;
-    color: #fff;
+    color: ${({ theme }) => theme.text_primary};
     transition: all 0.3s ease;
     cursor: pointer;
     &:hover {
         transform: scale(1.1);
         background-color: ${({ theme }) => theme.primary};
-        color: #fff;
+        color: ${({ theme }) => theme.white};
     }
 
     img {

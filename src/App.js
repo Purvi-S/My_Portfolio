@@ -1,6 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
-import {darkTheme } from "./utils/Themes";
+import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
+import Aurora from "./components/Aurora";
 import StarBackground from "./components/StarBackground";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
@@ -13,8 +14,13 @@ import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 
 const Body = styled.div`
-    background-color: ${({ theme }) => theme.bg};
+    /* soft morning light spilling from the top-left, warm cream base */
+    background:
+        radial-gradient(120% 90% at 8% 0%, #fefcf7 0%, transparent 45%),
+        radial-gradient(90% 70% at 100% 20%, #f3e7d3 0%, transparent 50%),
+        linear-gradient(180deg, #f6f1e8 0%, #efe6d6 100%);
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     position: relative;
 `;
@@ -25,6 +31,7 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Body>
+                    <Aurora />
                     <StarBackground />
                     <div style={{ position: "relative", zIndex: 1 }}>
                         <Hero />

@@ -1,22 +1,22 @@
 export const darkTheme = {
-  bg: "#0b0f2f",           // deep midnight blue
-  bgLight: "#1a2255",      // navy blue card background
-  primary: "#7f9fff",      // soft glowing blue (like distant stars)
-  text_primary: "#e0e7ff", // pale blue-white text (star glow)
-  text_secondary: "#a1a9d1", // muted periwinkle secondary text
-  card: "#182254",         // dark blue-violet card bg
-  card_light: "#2a3a78",   // lighter card bg
-  button: "#7f9fff",       // glowing blue button
-  white: "#e6ebff",        // very light blue-white
-  black: "#000611",        // almost black with blue tint
+  bg: "#f4efe6",            // warm cream linen
+  bgLight: "#ece3d4",       // soft beige
+  primary: "#a9824f",       // brushed brass / gold accent (the pen)
+  text_primary: "#35302a",  // warm espresso — the one dark note
+  text_secondary: "#8c8072",// warm taupe
+  card: "#fbf8f2",          // near-white warm card
+  card_light: "#efe7d9",    // light beige chip
+  button: "#a9824f",        // brass
+  white: "#fffdf8",         // warm white
+  black: "#2a2620",         // soft espresso-black
 };
 
 export const lightTheme = {
-  bg: "#f0f4ff",           // pale sky blue background
-  bgLight: "#d9e3ff",      // very light periwinkle card bg
-  primary: "#5c7eff",      // bright sky blue (cosmic pop)
-  text_primary: "#1c2d5a", // dark blue text
-  text_secondary: "#4a5c99", // medium blue secondary text
-  card: "#ffffff",         // white card background
-  button: "#5c7eff",       // sky blue button
+  bg: "#f4efe6",
+  bgLight: "#ece3d4",
+  primary: "#a9824f",
+  text_primary: "#35302a",
+  text_secondary: "#8c8072",
+  card: "#fbf8f2",
+  button: "#a9824f",
 };
