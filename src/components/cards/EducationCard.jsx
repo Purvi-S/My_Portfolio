@@ -66,9 +66,14 @@ const Grade = styled.div`
 `;
 
 const StyledDate = styled.div`
-  font-size: 16px;
+  display: inline-block;
+  font-size: 15px;
   font-weight: 700;
-  color: #7a5a2e;
+  color: #fffdf8;
+  background: #a9824f;
+  padding: 4px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(122, 90, 46, 0.3);
 `;
 
 const EducationCard = ({ education }) => {

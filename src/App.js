@@ -2,6 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import StarBackground from "./components/StarBackground";
+import Intro from "./components/Intro";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
@@ -29,6 +30,7 @@ function App() {
     return (
         <ThemeProvider theme={darkTheme}>
             <BrowserRouter>
+                <Intro />
                 <Navbar />
                 <Body>
                     <StarBackground />
