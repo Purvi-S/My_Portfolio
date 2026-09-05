@@ -361,7 +361,7 @@ const Projects = () => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          Production backend services, DevOps and cloud automation, plus AI and data work —
+          Production backend services, DevOps and cloud automation, plus AI and data work -
           filter by focus area to explore what I build.
         </Desc>
 
