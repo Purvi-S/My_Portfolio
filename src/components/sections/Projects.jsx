@@ -338,7 +338,7 @@ const ProjectCard = ({ project, reduce }) => {
             <Tag key={i}>{t}</Tag>
           ))}
         </Tags>
-        <Actions>
+        {/* <Actions>
           {project.github && (
             <LinkButton href={project.github} target="_blank" rel="noopener noreferrer">
               <FaGithub /> View Code
@@ -349,7 +349,7 @@ const ProjectCard = ({ project, reduce }) => {
               <FiExternalLink /> Live Demo
             </LinkButton>
           )}
-        </Actions>
+        </Actions> */}
       </Body>
     </Card>
   );
