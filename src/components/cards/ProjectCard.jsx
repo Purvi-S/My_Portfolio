@@ -140,7 +140,7 @@ const ProjectCard = ({ project }) => {
         <Date>{project.date}</Date>
         <Description lines={descriptionLines}>{project.description}</Description>
       </Details>
-      {(project.github || project.webapp) && (
+      {/* {(project.github || project.webapp) && (
         <ButtonContainer>
           {project.github && (
             <Button href={project.github} target="_blank" rel="noopener noreferrer">
@@ -153,7 +153,7 @@ const ProjectCard = ({ project }) => {
             </Button>
           )}
         </ButtonContainer>
-      )}
+      )} */}
     </Card>
   );
 };
